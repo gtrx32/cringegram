@@ -1,0 +1,12 @@
+.footer_wrapper {
+  background-color: rgb(52, 57, 104);
+  box-shadow: 0 0 20px 0 gray;
+}
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}

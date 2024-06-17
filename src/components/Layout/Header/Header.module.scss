@@ -1,0 +1,27 @@
+.header_wrapper {
+  background-color: rgb(52, 57, 104);
+  box-shadow: 0 0 20px 0 gray;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.title {
+  font-family: "ForestSmooth";
+  letter-spacing: 5px;
+}
+
+.search {
+  font-family: inherit;
+  font-size: 18px;
+  padding: 5px 10px;
+  width: 400px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

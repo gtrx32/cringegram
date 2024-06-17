@@ -1,0 +1,28 @@
+.main_wrapper {
+  flex-grow: 1;
+  display: flex;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  min-width: 300px;
+
+  a {
+    background-color: rgb(52, 57, 104);
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}

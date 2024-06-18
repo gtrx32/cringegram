@@ -2,17 +2,19 @@ import s from "./SearchBlock.module.scss";
 import { useSearchUsersQuery } from "@/api/usersApi";
 import Input from "@/components/Input";
 import { useClickOutside } from "@react-hooks-library/core";
+import { useDebounce } from "@react-hook/debounce";
 import { useEffect, useRef, useState } from "react";
 
 const SearchBlock = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useDebounce("", 300);
   const onChange = (value: string) => setValue(value);
   const { data } = useSearchUsersQuery(value, { skip: value.length < 1 });
 
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (data) setIsOpen(true);
+    if (data && data?.length > 0) setIsOpen(true);
+    else setIsOpen(false);
   }, [data]);
 
   const ref = useRef(null);

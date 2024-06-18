@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-hook/debounce": "^4.0.0",
     "@react-hooks-library/core": "^0.6.2",
     "@reduxjs/toolkit": "^2.2.5",
     "clsx": "^2.1.1",

@@ -17,6 +17,10 @@ const SearchBlock = () => {
     else setIsOpen(false);
   }, [data]);
 
+  useEffect(() => {
+    if (value.length < 1) setIsOpen(false);
+  }, [value]);
+
   const ref = useRef(null);
 
   useClickOutside(ref, () => {

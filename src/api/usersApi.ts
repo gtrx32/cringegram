@@ -15,7 +15,16 @@ export const usersApi = createApi({
         },
       }),
     }),
+    searchUser: builder.query<User, string>({
+      query: (value: string) => ({
+        url: "users",
+        params: {
+          id: value,
+        },
+      }),
+      transformResponse: (response: User[]) => response[0],
+    }),
   }),
 });
 
-export const { useSearchUsersQuery } = usersApi;
+export const { useSearchUsersQuery, useSearchUserQuery } = usersApi;

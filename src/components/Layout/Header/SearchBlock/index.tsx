@@ -4,6 +4,7 @@ import Input from "@/components/Input";
 import { useClickOutside } from "@react-hooks-library/core";
 import { useDebounce } from "@react-hook/debounce";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const SearchBlock = () => {
   const [value, setValue] = useDebounce("", 300);
@@ -29,16 +30,21 @@ const SearchBlock = () => {
 
   return (
     <div className={s.search_container}>
-      <Input onChange={onChange} placeholder="Поиск людей по имени" />
+      <Input onChange={onChange} placeholder="Search users by name" />
       {isOpen && (
         <div ref={ref} className={s.search_results}>
           {data?.map((user) => (
-            <div key={user.id} className={s.result_item}>
+            <Link
+              key={user.id}
+              href={`/users/${user.id}`}
+              className={s.result_item}
+              onClick={() => setIsOpen(false)}
+            >
               <div>
                 <p className={s.username}>{user.username}</p>
                 <p className={s.name}>{user.name}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

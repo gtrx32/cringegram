@@ -1,0 +1,20 @@
+.todoCard,
+.postCard {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.todoCard h3,
+.postCard h3 {
+  margin: 0 0 10px 0;
+}
+
+.todoCard p,
+.postCard p {
+  margin: 0;
+}

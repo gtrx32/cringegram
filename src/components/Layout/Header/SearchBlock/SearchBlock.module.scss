@@ -10,14 +10,15 @@
   left: 0;
   width: 100%;
   background-color: #fff;
-  border: 1px solid rgb(52, 57, 104);
   border-top: none;
   z-index: 1000;
   overflow-y: auto;
   border-radius: 10px;
+  box-shadow: 0 0 10px black;
 }
 
 .result_item {
+  display: block;
   padding: 10px;
   border-bottom: 1px solid #ddd;
   color: black;

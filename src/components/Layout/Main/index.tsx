@@ -9,7 +9,7 @@ const Main: FC<PropsWithChildren> = ({ children }) => {
       <Container>
         <main className={s.main}>
           <nav className={s.nav}>
-            <Link href="/following">Following</Link>
+            <Link href="/subscriptions">Subscriptions</Link>
             <Link href="/todos">Todos</Link>
             <Link href="/posts">Posts</Link>
           </nav>

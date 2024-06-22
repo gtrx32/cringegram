@@ -1,3 +1,14 @@
+import PostCard from "@/components/PostList/PostCard";
+import { useAppSelector } from "@/hooks/useAppSelector";
+
 export default function Posts() {
-  return <></>;
+  const { posts } = useAppSelector((state) => state.posts);
+
+  return (
+    <ul>
+      {posts.map((post) => (
+        <PostCard post={post} />
+      ))}
+    </ul>
+  );
 }

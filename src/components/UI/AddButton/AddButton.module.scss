@@ -1,0 +1,17 @@
+.addButton {
+  background-color: rgb(133, 167, 221);
+  transition: 0.5s background-color ease;
+  
+  &:hover {
+    background-color: rgb(160, 200, 255);
+  }
+}
+
+.removeButton {
+  background-color: rgb(221, 142, 133);
+  transition: 0.5s background-color ease;
+
+  &:hover {
+    background-color: rgb(255, 170, 160);
+  }
+}

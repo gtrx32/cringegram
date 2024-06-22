@@ -1,7 +1,7 @@
-import Container from "@/components/Container";
+import Container from "@/components/UI/Container";
 import s from "./Header.module.scss";
 import Link from "next/link";
-import SearchBlock from "./SearchBlock";
+import SearchBlock from "../_components/SearchBlock";
 
 const Header = () => {
   return (

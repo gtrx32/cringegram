@@ -1,6 +1,7 @@
 import { Post } from "@/types/post";
 import { FC } from "react";
 import s from "./PostCard.module.scss";
+import PostAddButton from "@/components/UI/AddButton/PostAddButton";
 
 interface PostCardProps {
   post: Post;
@@ -11,6 +12,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
     <div className={s.postCard}>
       <h3>{post.title}</h3>
       <p>{post.body}</p>
+      <PostAddButton post={post} />
     </div>
   );
 };

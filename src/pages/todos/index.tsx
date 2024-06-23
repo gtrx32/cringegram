@@ -1,14 +1,8 @@
-import TodoCard from "@/components/TodoList/TodoCard";
+import TodoList from "@/components/TodoList";
 import { useAppSelector } from "@/hooks/useAppSelector";
 
 export default function Todos() {
   const { todos } = useAppSelector((state) => state.todos);
 
-  return (
-    <ul>
-      {todos.map((todo) => (
-        <TodoCard todo={todo} />
-      ))}
-    </ul>
-  );
+  return <TodoList todos={todos} />;
 }

@@ -1,0 +1,29 @@
+.postCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+
+  .postInfo {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 24px;
+      padding-bottom: 5px;
+    }
+
+    .body {
+      font-size: 18px;
+    }
+  }
+
+  .button {
+    height: fit-content;
+    width: fit-content;
+  }
+}

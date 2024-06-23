@@ -10,15 +10,13 @@ interface UserPreviewProps {
 
 const UserPreview: FC<UserPreviewProps> = ({ user }) => {
   return (
-    <div>
       <Link key={user.id} href={`/users/${user.id}`} className={s.result_item}>
         <div>
           <p className={s.username}>{user.username}</p>
           <p className={s.name}>{user.name}</p>
         </div>
-        <UserAddButton user={user} />
+        <UserAddButton user={user} className={s.addButton} />
       </Link>
-    </div>
   );
 };
 

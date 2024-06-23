@@ -2,6 +2,7 @@ import { User } from "@/types/user";
 import { FC } from "react";
 import s from "./UserCard.module.scss";
 import UserAddButton from "@/components/UI/AddButton/UserAddButton";
+import Link from "next/link";
 
 interface UserCardProps {
   user: User;
@@ -10,10 +11,14 @@ interface UserCardProps {
 const UserCard: FC<UserCardProps> = ({ user }) => {
   return (
     <div className={s.userCard}>
-      <h3>{user.name}</h3>
-      <p>{user.username}</p>
-      <p>{user.email}</p>
-      <UserAddButton user={user} />
+      <div className={s.userInfo}>
+        <p className={s.username}>{user.username}</p>
+        <Link className={s.name} href={`users/${user.id}`}>
+          {user.name}
+        </Link>
+        <p className={s.email}>{user.email}</p>
+      </div>
+      <UserAddButton className={s.button} user={user} />
     </div>
   );
 };

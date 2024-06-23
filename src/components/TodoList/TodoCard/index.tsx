@@ -10,8 +10,12 @@ interface TodoCardProps {
 const TodoCard: FC<TodoCardProps> = ({ todo }) => {
   return (
     <div className={s.todoCard}>
-      <h3>{todo.title}</h3>
-      <p>Status: {todo.completed ? "Completed" : "Not Completed"}</p>
+      <div className={s.todoInfo}>
+        <h3 className={s.title}>{todo.title}</h3>
+        <p className={s.status}>
+          Status: {todo.completed ? "Completed" : "Not Completed"}
+        </p>
+      </div>
       <TodoAddButton todo={todo} />
     </div>
   );

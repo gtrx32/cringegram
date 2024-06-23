@@ -1,5 +1,7 @@
 .result_item {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ddd;
   color: black;
@@ -18,4 +20,11 @@
 .username {
   font-size: 16px;
   color: #999;
+}
+
+.addButton {
+  display: inline;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
 }

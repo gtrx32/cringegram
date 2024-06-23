@@ -10,9 +10,11 @@ interface PostCardProps {
 const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
     <div className={s.postCard}>
-      <h3>{post.title}</h3>
-      <p>{post.body}</p>
-      <PostAddButton post={post} />
+      <div className={s.postInfo}>
+        <h3 className={s.title}>{post.title}</h3>
+        <p className={s.body}>{post.body}</p>
+      </div>
+      <PostAddButton className={s.button} post={post} />
     </div>
   );
 };
